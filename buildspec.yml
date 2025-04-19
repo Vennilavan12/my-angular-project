@@ -29,7 +29,7 @@ phases:
       - mkdir deploy
       - cp -r $BUILD_FOLDER/* deploy/
       - cp appspec.yml deploy/
-      - cp install.sh deploy/
+      - cp install_nginx.sh deploy/
       - cd deploy
       - zip -r ../$ZIP_NAME .
       - cd ..
