@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     S3_BUCKET: "angular-bucket-1234"
-    BUILD_ENV: "prod"
+
     BUILD_FOLDER: "dist"
 
 phases:
@@ -17,10 +17,10 @@ phases:
 
   build:
     commands:
-      - echo Build started for $BUILD_ENV on `date`
+      - echo Build started for on `date`
       - node -v
       - npm -v
-      - ng build --configuration=$BUILD_ENV
+      - ng build 
       - echo Build completed…
 
   post_build:
